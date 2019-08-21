@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Constants } from '../app-constants';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,10 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  Constants = Constants;
+  
+
   @Input() title: String;
   isCollapsed = true;
   toggleCollapsed(): void {

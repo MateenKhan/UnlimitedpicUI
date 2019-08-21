@@ -18,11 +18,7 @@
                 arrow_drop_down
               </i></button>
             <mat-menu #Images="matMenu">
-              <button mat-menu-item>Vectors</button>
-              <button mat-menu-item>images</button>
-              <button mat-menu-item>Icons</button>
-              <button mat-menu-item>PSDs</button>
-              <button mat-menu-item>footage</button>
+              <button *ngFor="let image of Constants.imagesList;" mat-menu-item>{{image}}</button>
             </mat-menu>
           </li>
           <li>
@@ -30,11 +26,7 @@
                 arrow_drop_down
               </i></button>
             <mat-menu #vector="matMenu">
-              <button mat-menu-item>Vectors</button>
-              <button mat-menu-item>images</button>
-              <button mat-menu-item>Icons</button>
-              <button mat-menu-item>PSDs</button>
-              <button mat-menu-item>footage</button>
+              <button *ngFor="let vector of Constants.vectorsList;" mat-menu-item>{{vector}}</button>
             </mat-menu>
           </li>
           <li>
@@ -42,11 +34,7 @@
                 arrow_drop_down
               </i></button>
             <mat-menu #psd="matMenu">
-              <button mat-menu-item>Vectors</button>
-              <button mat-menu-item>images</button>
-              <button mat-menu-item>Icons</button>
-              <button mat-menu-item>PSDs</button>
-              <button mat-menu-item>footage</button>
+              <button *ngFor="let psd of Constants.psdsList;" mat-menu-item>{{psd}}</button>
             </mat-menu>
           </li>
           <li>
@@ -54,11 +42,7 @@
                 arrow_drop_down
               </i></button>
             <mat-menu #icon="matMenu">
-              <button mat-menu-item>Vectors</button>
-              <button mat-menu-item>images</button>
-              <button mat-menu-item>Icons</button>
-              <button mat-menu-item>PSDs</button>
-              <button mat-menu-item>footage</button>
+              <button *ngFor="let icon of Constants.iconsList;" mat-menu-item>{{icon}}</button>
             </mat-menu>
           </li>
           <li>
