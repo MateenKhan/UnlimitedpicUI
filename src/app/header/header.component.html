@@ -45,17 +45,18 @@
               <button *ngFor="let icon of Constants.iconsList;" mat-menu-item>{{icon}}</button>
             </mat-menu>
           </li>
-          <li>
+          <!-- <li>
             <button mat-button [matMenuTriggerFor]="video">Videos</button>
-          </li>
+          </li> -->
           <!-- <li class="nav-item">
                 <a class="nav-link" href="#">FREE</a>
               </li> -->
         </ul>
         <div class="login-register-item-list">
-          <span><button mat-button (click)="openloginmodel()">Login</button></span>
-          <span><button mat-button (click)="openregistermodel()">Register</button></span>
-
+          <span *ngIf="this.storageService.isUserLoggedIn"><b>Welcome {{this.storageService.getUserName()}}!</b></span>
+          <span *ngIf="!this.storageService.isUserLoggedIn"><button mat-button (click)="openloginmodel()">Login</button></span>
+          <span *ngIf="!this.storageService.isUserLoggedIn"><button mat-button (click)="openregistermodel()">Register</button></span>
+          <span *ngIf="this.storageService.isUserLoggedIn"><button mat-button (click)="logout()">Logout</button></span>
         </div>
       </div>
     </div>

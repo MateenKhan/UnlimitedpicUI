@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Constants } from '../app-constants';
+import { StorageService } from '../services/storage-service';
 
 @Component({
   selector: 'app-header',
@@ -9,16 +10,16 @@ import { Constants } from '../app-constants';
 })
 export class HeaderComponent implements OnInit {
 
-  Constants = Constants;
-  
+  constructor(private modalService: NgbModal, private storageService: StorageService) { }
 
+  Constants = Constants;
+  isUserLoggedIn = this.storageService.isUserLoggedIn;
   @Input() title: String;
   isCollapsed = true;
   toggleCollapsed(): void {
     this.isCollapsed = !this.isCollapsed;
   }
 
-  constructor(private modalService: NgbModal) { }
 
   openloginmodel() {
     const modalRef = this.modalService.open(LoginModalComponent);
@@ -28,6 +29,10 @@ export class HeaderComponent implements OnInit {
   openregistermodel() {
     const modalRef = this.modalService.open(RegisterModalComponent);
     // modalRef.componentInstance.name = 'World';
+  }
+
+  logout(){
+    this.storageService.deleteUser();
   }
 
   ngOnInit() {
@@ -43,7 +48,13 @@ export class HeaderComponent implements OnInit {
 })
 export class LoginModalComponent {
   @Input() name;
-  constructor(public activeModal: NgbActiveModal) { }
+  email: string = '';
+  constructor(public activeModal: NgbActiveModal, private storageService: StorageService) { }
+
+  login() {
+    this.storageService.storeUser(this.email);
+    this.activeModal.close();
+  }
 }
 
 
