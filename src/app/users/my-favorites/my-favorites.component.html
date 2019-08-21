@@ -1,0 +1,32 @@
+<div class="main-content">
+  <div class="card">
+    <div class="card-content">
+      <div class="row title-block m-0">
+        <h4 class="pull-left f-w-500 m-0">My Favorites
+        </h4>
+      </div>
+
+      <div class="my-favorites-list">
+        <div class="container-fluid no-padding">
+          <div class="outerContainer">
+            <div class="containerw3 containerw3-margin">
+              <div *ngFor="let image of ImageResponse.images;">
+                <img routerLink="/ImageInfo" class="image-file" src="{{image.ImagePath}}" />
+                <div class="image-btns-right">
+                  <li class="action-buttons"><i class="fa fa-heart"></i></li>
+                  <li class="action-buttons"><i class="fa fa-share-alt"></i></li>
+                </div>
+                <div class="image-description-bottom">
+                  <div class="description-text">
+                    <h5>{{image.Description}}</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

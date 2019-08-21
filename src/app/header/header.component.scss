@@ -1,0 +1,241 @@
+.large-scren-menu {
+  display: none;
+
+  .header-container {
+    position: relative;
+    background: #32c24d;
+    height: 49px;
+    line-height: 48px;
+    padding: 8px 0px;
+    font-size: 18px;
+  }
+
+  .header-logo img {
+    height: 35px;
+  }
+
+  .search-box-center {
+    width: 100%;
+    background: #e6e6e6;
+    height: 48px;
+  }
+
+  .search-box-center:hover {
+    background: #f5f5f5;
+  }
+
+  .search-box-center .searchbar-media-filter {
+    background: rgb(212, 212, 212);
+    float: left;
+    padding: 0px 20px 0px;
+    color: #000;
+  }
+
+  .media-filter-dropdown {
+    display: inline;
+    position: static;
+  }
+
+  .searchbar-input-field .input-style-control {
+    border: none;
+    box-shadow: none;
+    padding-top: 0px;
+    padding-left: 15px;
+    background: transparent;
+    float: left;
+  }
+
+  .searchbar-input-field .searchbar-search-button {
+    position: absolute;
+    background: #e6e6e6;
+    color: #000;
+    right: 15px;
+    padding: 0px 15px;
+  }
+
+  .searchbar-search-button .searchbar-search-button-icon {
+    position: relative;
+    top: 7px;
+  }
+
+  .searchbar-input-field .input-style-control:focus {
+    outline: 0px;
+  }
+
+  .login-register-item-list {
+    float: right;
+    font-weight: 400;
+  }
+
+  .bg-light {
+    background-color: #fff !important;
+    border-bottom: 1px solid #d1d1d1;
+  }
+
+  .header-container-b {
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .dropdown:hover {
+    cursor: pointer;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .navbar {
+    box-shadow: none;
+  }
+
+  .navbar-nav li a {
+    font-size: 14px;
+    color: #000;
+  }
+}
+
+.mobile-view-menu {
+  display: block;
+
+  .header-logo img {
+    height: 35px;
+  }
+
+  .header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 3;
+    position: relative;
+    padding-bottom: 8px;
+    padding-top: 10px;
+  }
+
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    // padding: 10px 0px;
+    background: #eee;
+    top: 42px;
+  }
+
+  .header li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(61, 61, 61);
+    font-weight: 500;
+  }
+
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #f4f4f4;
+  }
+
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  /* menu */
+
+  .header .menu {
+    width: 100%;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  /* menu icon */
+
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 16px 20px;
+    position: relative;
+    user-select: none;
+  }
+
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 18px;
+  }
+
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+
+  /* menu btn */
+
+  .header .menu-btn {
+    display: none;
+  }
+
+  .header .menu-btn:checked ~ .menu {
+    max-height: 100vh;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    // padding: 10px 0px;
+    background: #eee;
+    top: 42px;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  .mobile-menu-footer {
+    border-top: 1px solid rgb(163, 163, 163);
+  }
+}
+
+@media (min-width: 992px) {
+  .large-scren-menu {
+    display: block;
+  }
+  .mobile-view-menu {
+    display: none;
+  }
+}

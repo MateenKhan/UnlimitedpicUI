@@ -1,0 +1,71 @@
+<app-search-field></app-search-field>
+
+<div class="Search-result-container">
+  <div class="container-fluid page-top-section">
+    <div class="row m-0">
+      <div class="col-md-8">
+        <h3 class="search-clarification">Vintage vectors<span> (1,278,664)</span></h3>
+        <p>Related Searches: Christmas card, Wedding card, Visiting card, Invitation card, Id card</p>
+      </div>
+      <div class="col-md-4">
+        <div class="filter-buttons">
+          <span>
+            <button mat-button [matMenuTriggerFor]="imagetype">All Content<i class="material-icons">
+                arrow_drop_down
+              </i></button>
+            <mat-menu #imagetype="matMenu">
+              <button mat-menu-item>Images</button>
+              <button mat-menu-item>Vectors</button>
+              <button mat-menu-item>icons</button>
+              <button mat-menu-item>videos</button>
+            </mat-menu>
+          </span>
+          <span>
+            <button mat-button [matMenuTriggerFor]="menu">Sort By <i class="material-icons">
+                arrow_drop_down
+              </i></button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Relevance</button>
+              <button mat-menu-item>New</button>
+            </mat-menu>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid Result-list-page">
+    <div class="outerContainer">
+      <div class="containerw3 containerw3-margin">
+        <div *ngFor="let image of ImageResponse.images;">
+          <img routerLink="/ImageInfo" class="image-file" src="{{image.ImagePath}}" />
+          <div class="image-btns-right">
+            <li class="action-buttons"><i class="fa fa-heart"></i></li>
+            <li class="action-buttons"><i class="fa fa-share-alt"></i></li>
+          </div>
+          <div class="image-description-bottom">
+            <div class="description-text">
+              <h5>{{image.Description}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container pagination-section">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

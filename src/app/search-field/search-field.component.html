@@ -1,0 +1,24 @@
+<div class="Top-search-wrapper">
+  <div class="col-md-8 offset-md-2">
+    <div class="search-box-center">
+      <div class="searchbar-media-filter">
+        <div class="filter-buttons">
+          <button mat-button [matMenuTriggerFor]="menu">All Contents<i class="material-icons">
+              arrow_drop_down
+            </i></button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Vectors</button>
+            <button mat-menu-item>images</button>
+            <button mat-menu-item>Icons</button>
+            <button mat-menu-item>PSDs</button>
+            <button mat-menu-item>footage</button>
+          </mat-menu>
+        </div>
+      </div>
+      <div class="searchbar-input-field">
+        <span><input type="text" class="input-style-control" placeholder="Type here to search"></span>
+        <span class="searchbar-search-button"><i class="material-icons searchbar-search-button-icon">search</i></span>
+      </div>
+    </div>
+  </div>
+</div>

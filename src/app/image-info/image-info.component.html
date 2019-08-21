@@ -1,0 +1,121 @@
+<app-search-field></app-search-field>
+
+<div class="top-image-info-section ">
+  <div class="container">
+    <div class="row m-0">
+      <div class="col-md-7 resource-media">
+        <div class="resource-media-box">
+          <div class="resource-image">
+            <img src="assets/img/florals.jpg">
+          </div>
+        </div>
+        <div class="resource-media-bottom-actions">
+          <div class="social-share float-left">
+            <ul class="social-list">
+              <li>Share on :</li>
+              <li><i class="fa fa-twitter"></i></li>
+              <li><i class="fa fa-twitter"></i></li>
+              <li><i class="fa fa-twitter"></i></li>
+            </ul>
+          </div>
+          <div class="Download-preview-btn float-right">
+            <p class="m-0">Download Preview</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="resource-info">
+          <h3>Happy Holidays Lettering Vector</h3>
+          <p>
+            Happy Holidays white handwritten lettering in retro style on red vector
+            background.
+          </p>
+          <p>Vector Id: 1530426</p>
+        </div>
+
+        <!-- <div class="payment-option">          
+          <p>Please select payment process:</p>
+          <mat-radio-group>
+            <p>
+              <mat-radio-button value="1">Single Payment Rs. 755 inr
+              </mat-radio-button>
+            </p>
+            <p>
+              <mat-radio-button value="2">Subscription</mat-radio-button>
+            </p>
+          </mat-radio-group>
+        </div> -->
+        <div class="payment-option">
+          <p><span class="f-w-500">JPG </span> (5250 px X 4017 px)</p>
+        </div>
+        <div class="row m-0 download-button">
+          <button type="button" class="btn btn-blue float-left" (click)="open()">
+            <span class="download-text">Free
+              Download</span><br>
+            <span>AI, EPS & JPEG</span>
+          </button>
+          <div>
+            <i class="material-icons favourite-btn">
+              favorite_border
+            </i>
+          </div>
+        </div>
+
+        <div class="content-source">
+          <p class="f-w-500">The designer of the work</p>
+          <div class="source-avatar-info">
+            <div class="sharer-avatar" routerLink="/Portfolio">
+              <img class="sharer-avatar-img" src="assets/img/florals.jpg">
+              <p class="sharer-name">GraphcDzyns</p>
+            </div>
+          </div>
+          <div class="sharer-follow-button">
+            <button mat-button class="custom-follow-btn"> <i class="material-icons">
+                add
+              </i> Follow</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid result-similar-search">
+  <div class="site-wrapper">
+    <div class="search-keywords">
+      <h3 class="f-w-400">Related Keywords</h3>
+      <ul class="keyword-list">
+        <li><a>Florals</a></li>
+        <li><a>Florals</a></li>
+        <li><a>Florals</a></li>
+      </ul>
+    </div>
+
+    <div class="similar-images">
+      <h3 class="f-w-400">Related vectors</h3>
+      <div class="outerContainer">
+        <div class="containerw3 containerw3-margin">
+          <div *ngFor="let image of ImageResponse.images;">
+            <img class="image-file" src="{{image.ImagePath}}" />
+            <div class="image-btns-right">
+              <li class="action-buttons"><i class="fa fa-heart"></i></li>
+              <li class="action-buttons"><i class="fa fa-share-alt"></i></li>
+            </div>
+            <div class="image-description-bottom">
+              <div class="description-text">
+                <h5>{{image.Description}}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row m-0 view-more-button">
+        <button type="button" class="btn btn-blue">
+          View More..
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

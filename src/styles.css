@@ -1,0 +1,63 @@
+body {
+  font-family: "Roboto";
+  background-color: #fff;
+}
+.w-100 {
+  width: 100%;
+}
+
+.site-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card-content {
+  padding: 15px 20px;
+  position: relative;
+}
+.custom-btn-blue {
+  background-color: #3f51b5 !important;
+}
+.no-padding {
+  padding: 0px !important;
+}
+
+.p-t-0 {
+  padding-top: 0px !important;
+}
+
+.p-b-0 {
+  padding-bottom: 0px !important;
+}
+
+.f-w-400 {
+  font-weight: 400;
+}
+
+.f-w-500 {
+  font-weight: 500;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.m-t-12 {
+  margin-top: 12px;
+}
+
+.m-r-10 {
+  margin-right: 10px;
+}
+
+.m-r-15 {
+  margin-right: 15px;
+}
+
+.modal-backdrop {
+  background: #000 !important;
+}
+.modal-backdrop.show {
+  opacity: 0.6 !important;
+}

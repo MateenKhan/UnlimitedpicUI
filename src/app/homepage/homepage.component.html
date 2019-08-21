@@ -1,0 +1,92 @@
+<div class="home-banner-container-bg">
+  <div class="home-banner-image">
+    <div class="container">
+      <div class="col-md-8 offset-md-2">
+        <div class="home-banner-content">
+          <h2 class="search-box-title-text">
+            Find Free Vectors, PSD, Icons and photos
+          </h2>
+          <div class="home-search-box">
+            <div class="search-box-center">
+              <div class="searchbar-media-filter">
+                <div class="filter-buttons">
+                  <button mat-button [matMenuTriggerFor]="menu">All Contents<i class="material-icons">
+                      arrow_drop_down
+                    </i></button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Vectors</button>
+                    <button mat-menu-item>images</button>
+                    <button mat-menu-item>Icons</button>
+                    <button mat-menu-item>PSDs</button>
+                    <button mat-menu-item>footage</button>
+                  </mat-menu>
+                </div>
+              </div>
+              <div class="searchbar-input-field">
+                <span><input type="text" class="input-style-control" placeholder="Type here to search"></span>
+                <span class="searchbar-search-button"><i
+                    class="material-icons searchbar-search-button-icon">search</i></span>
+              </div>
+            </div>
+          </div>
+          <div class="home-banner-quick-search-list">
+            <p><span style="font-weight: 500;">Quick Search : </span><span>Logo, </span><span>Wedding Invitation,
+              </span>
+              <span>Christmas Invitation </span>Or
+              <span>Business Card</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-category-section">
+  <div class="container">
+    <div class="row m-0">
+      <div class="col-md-6 col-lg-3 no-padding" *ngFor="let contentcategory of CategoryResponse.categorytype;">
+        <div class="category-content-box" routerLink="/SearchResult">
+          <div class="category-content-image-box">
+            <img class="category-content-image" src="{{contentcategory.ImagePath}}">
+          </div>
+          <div class="category-content-text">
+            <h5 class="f-w-500">{{contentcategory.categorytitle}}</h5>
+            <p class="m-0">{{contentcategory.categoryDescription}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sub-category-section">
+  <div class="container">
+    <h3 class="content-category-heading">Browse by categories
+    </h3>
+    <div class="outerContainer">
+      <div class="containerw3 containerw3-margin">
+        <div *ngFor="let image of ImageResponse.images;">
+          <img routerLink="/SearchResult" class="image-file" src="{{image.ImagePath}}" />
+          <div class="image-description-bottom">
+            <div class="description-text">
+              <h5>{{image.Description}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="about-design-collection">
+  <div class="container">
+    <h4>Royalty free photos and videos</h4>
+    <p class="m-t-12">unlimitedpic offers the best quality, royalty free stock photos, music and video for nearly any
+      application.
+      From illustrations to vectors, when you need the perfect image for your website or blog, we have you covered. Our
+      massive selection of stock footage and audio clips are the ideal choice to set the scene in your next short or
+      feature film.</p>
+  </div>
+</div>

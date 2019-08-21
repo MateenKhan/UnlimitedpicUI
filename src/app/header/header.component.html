@@ -1,0 +1,103 @@
+<div class="large-scren-menu">
+  <nav class="navbar navbar-expand-md navbar-light bg-light p-t-0 p-b-0 m-0">
+    <div class="container-fluid site-wrapper">
+      <a class="navbar-brand" href="#"><span>
+          <a class="header-logo" routerLink="/">
+            <img src="./assets/img/unlimitedpic.svg">
+          </a>
+        </span></a>
+      <button class="navbar-toggler" type="button" (click)="toggleCollapsed()" data-toggle="collapse"
+        data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ngToggler></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav mr-auto f-w-400">
+          <li>
+            <button mat-button [matMenuTriggerFor]="Images">Images<i class="material-icons">
+                arrow_drop_down
+              </i></button>
+            <mat-menu #Images="matMenu">
+              <button mat-menu-item>Vectors</button>
+              <button mat-menu-item>images</button>
+              <button mat-menu-item>Icons</button>
+              <button mat-menu-item>PSDs</button>
+              <button mat-menu-item>footage</button>
+            </mat-menu>
+          </li>
+          <li>
+            <button mat-button [matMenuTriggerFor]="vector">Vectors<i class="material-icons">
+                arrow_drop_down
+              </i></button>
+            <mat-menu #vector="matMenu">
+              <button mat-menu-item>Vectors</button>
+              <button mat-menu-item>images</button>
+              <button mat-menu-item>Icons</button>
+              <button mat-menu-item>PSDs</button>
+              <button mat-menu-item>footage</button>
+            </mat-menu>
+          </li>
+          <li>
+            <button mat-button [matMenuTriggerFor]="psd">PSDs<i class="material-icons">
+                arrow_drop_down
+              </i></button>
+            <mat-menu #psd="matMenu">
+              <button mat-menu-item>Vectors</button>
+              <button mat-menu-item>images</button>
+              <button mat-menu-item>Icons</button>
+              <button mat-menu-item>PSDs</button>
+              <button mat-menu-item>footage</button>
+            </mat-menu>
+          </li>
+          <li>
+            <button mat-button [matMenuTriggerFor]="icon">Icons<i class="material-icons">
+                arrow_drop_down
+              </i></button>
+            <mat-menu #icon="matMenu">
+              <button mat-menu-item>Vectors</button>
+              <button mat-menu-item>images</button>
+              <button mat-menu-item>Icons</button>
+              <button mat-menu-item>PSDs</button>
+              <button mat-menu-item>footage</button>
+            </mat-menu>
+          </li>
+          <li>
+            <button mat-button [matMenuTriggerFor]="video">Videos</button>
+          </li>
+          <!-- <li class="nav-item">
+                <a class="nav-link" href="#">FREE</a>
+              </li> -->
+        </ul>
+        <div class="login-register-item-list">
+          <span><button mat-button (click)="openloginmodel()">Login</button></span>
+          <span><button mat-button (click)="openregistermodel()">Register</button></span>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+<nav class="bg-light p-t-0 p-b-0 m-0 mobile-view-menu">
+  <header class="header">
+    <div class="container-fluid site-wrapper">
+      <a class="header-logo" routerLink="/">
+        <img src="./assets/img/unlimitedpic.svg">
+      </a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="#work">Images</a></li>
+        <li><a href="#about">Vectors</a></li>
+        <li><a href="#careers">PSDs</a></li>
+        <li><a href="#contact">Icons</a></li>
+        <li><a href="#careers">Videos</a></li>
+        <div class="mobile-menu-footer">
+          <li><a href="#" (click)="openloginmodel()">Login</a></li>
+          <li><a href="#" (click)="openregistermodel()">Register</a></li>
+        </div>
+      </ul>
+    </div>
+  </header>
+</nav>

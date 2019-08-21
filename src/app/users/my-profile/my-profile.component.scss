@@ -1,0 +1,87 @@
+.main-content {
+  padding: 5px 0px;
+
+  h6 {
+    text-transform: none;
+  }
+
+  .card-content {
+    h3 {
+      font-weight: 500;
+    }
+
+    .my-profile-forms {
+      padding: 20px 16px;
+    }
+  }
+
+  .title-block {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
+  a {
+    cursor: pointer;
+    color: #f44336;
+  }
+
+  .card {
+    border-radius: 2px;
+    margin: 10px 0px;
+  }
+
+  mat-tab-group {
+    .edit-btn {
+      color: #969696;
+      cursor: pointer;
+      position: relative;
+      top: 10px;
+    }
+
+    .edit-btn:hover {
+      text-decoration: underline;
+    }
+
+    .profile-lable {
+      font-size: 14px !important;
+      color: #000;
+    }
+
+    .profile-lable {
+      font-size: 14px !important;
+      color: #000;
+    }
+  }
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  color: #3155a5;
+}
+
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background: #3155a5;
+}
+
+:host ::ng-deep .mat-form-field-placeholder {
+  font-size: 15px;
+  color: rgb(82, 82, 82);
+}
+
+::ng-deep .mat-focused .mat-form-field-placeholder {
+  color: #3155a5;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  background-color: transparent;
+  color: rgb(49, 85, 165);
+  opacity: 1;
+}
+
+.Password-tab{
+    .change-password-title{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+}

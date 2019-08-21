@@ -1,0 +1,82 @@
+<div class="main-content">
+  <div class="card">
+    <div class="card-content">
+      <div class="row title-block m-0">
+        <h4 class="pull-left f-w-500 m-0">My Profile
+        </h4>
+      </div>
+
+      <mat-tab-group #matgroup>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon m-r-10 f-18 m-t-5">person</mat-icon>
+            Basic Profile
+          </ng-template>
+          <form class=" my-profile-forms">
+            <div class="row">
+              <div class="col-md-6 p-t-5 p-b-5 p-t-5">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Username" name="Username">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 p-b-5 p-t-5">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Email" name="Email">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 p-t-5 p-b-5 p-t-5">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Phone Number" name="Phone Number">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6 p-b-5 p-t-5">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Location" name="Location">
+                </mat-form-field>
+              </div>
+            </div>
+          </form>
+          <div>
+            <button mat-button class="btn custom-btn-blue float-right">Update</button>
+            <div class="clearfix"></div>
+          </div>
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon class="example-tab-icon m-r-10 f-18 m-t-5">person</mat-icon>
+            Password
+          </ng-template>
+          <form class="Password-tab my-profile-forms">
+            <h4 class="change-password-title">Change Password</h4>
+            <div class="row">
+              <div class="col-md-6 p-t-5 p-b-5 p-t-5">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Old Password">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 p-b-5 p-t-5">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="New Password">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 p-t-5 p-b-5 p-t-5">
+                <mat-form-field class="w-100">
+                  <input matInput placeholder="Confirm New Password">
+                </mat-form-field>
+              </div>
+            </div>
+          </form>
+          <div>
+            <button mat-button class="btn custom-btn-blue float-right">Update</button>
+            <div class="clearfix"></div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

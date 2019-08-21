@@ -1,0 +1,24 @@
+.model-title-style{
+    font-weight: 600;
+    color: #2f5ffc;
+}
+
+.attribution-row{
+    margin-top: 25px;
+    margin-bottom: 15px;
+
+    .attribution-title{
+        font-weight: 500;        
+        color: #000;
+    }
+}
+.attribution-link{
+    input{
+        font-size: 14px;
+        padding: 5px 10px;
+        width: 100% !important;        
+        border: none;
+        background: #eee;
+    }
+}
+
